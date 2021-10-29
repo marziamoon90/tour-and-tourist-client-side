@@ -26,9 +26,9 @@ const Header = () => {
                         <Nav>
                             {
                                 user.email ? <div className='d-flex flex-md-row'>
-                                    <Nav.Link as={Link} to="/">My Tour Plans</Nav.Link>
-                                    <Nav.Link as={Link} to="/">Manage All Plans</Nav.Link>
-                                    <Nav.Link as={Link} to="/">Add a plan</Nav.Link>
+                                    <Nav.Link as={Link} to="/my_tour">My tour plans</Nav.Link>
+                                    <Nav.Link as={Link} to="/manage_plan">Manage all plan</Nav.Link>
+                                    <Nav.Link as={Link} to="/add_plan">Add a plan</Nav.Link>
                                     <Nav.Link onClick={logOut} as={Link} to="/">Logout</Nav.Link>
                                 </div> :
 

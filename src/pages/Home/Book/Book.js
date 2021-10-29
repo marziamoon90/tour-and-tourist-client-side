@@ -21,7 +21,7 @@ const Book = () => {
         const bookingDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
         bookingDetails.date = bookingDate;
         bookingDetails.bookingId = singlePlan._id;
-        bookingDetails.status = "Pending"
+        bookingDetails.status = "Pending";
         console.log(data)
 
         fetch('https://blooming-scrubland-16632.herokuapp.com/booking', {

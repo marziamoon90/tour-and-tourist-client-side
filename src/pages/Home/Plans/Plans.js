@@ -17,7 +17,9 @@ const Plans = ({ plan }) => {
                             {spot}
                         </Card.Title>
                         <Card.Title>
-                            <Button style={{ backgroundColor: '#879501' }} className=" border-0"> <Nav.Link className="text-light" as={Link} to={`/book/${_id}`} >Book Tour</Nav.Link></Button>
+                            <Button style={{ backgroundColor: '#879501' }} className=" border-0"> <Nav.Link className="text-light" as={Link} to={`/book/${_id}`} >
+                                <i className="far fa-calendar-plus me-2"></i>
+                                Book Tour</Nav.Link></Button>
                         </Card.Title>
                     </Card.Body>
                 </Card>
