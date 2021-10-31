@@ -11,7 +11,7 @@ const AddPlan = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:5000/plans', data)
+        axios.post('https://blooming-scrubland-16632.herokuapp.com/plans', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -35,7 +35,7 @@ const AddPlan = () => {
                         <div className="container">
                             <Nav.Link className="text-light" as={Link} to="/manage_plan">
                                 <i className="fas fa-users me-2"></i>
-                                Tourist Booking List</Nav.Link>
+                                All Tourist Booking List</Nav.Link>
                         </div>
                     </Col>
                     <Col md={9}>

@@ -18,10 +18,12 @@ const Book = () => {
     const onSubmit = data => {
         const bookingDetails = data;
         const date = new Date();
-        const bookingDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+        const bookingDate = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
         bookingDetails.date = bookingDate;
         bookingDetails.bookingId = singlePlan._id;
-        bookingDetails.status = "Pending";
+        bookingDetails.status = false;
+        bookingDetails.spot = singlePlan.spot;
+        bookingDetails.img = singlePlan.img;
         console.log(data)
 
         fetch('https://blooming-scrubland-16632.herokuapp.com/booking', {
@@ -56,14 +58,14 @@ const Book = () => {
     return (
         <div className='text-center'>
             <div >
-                <img className="spot-img" src={singlePlan.img} alt="" />
+                <img className="spot-img" src={singlePlan?.img} alt="" />
             </div>
             {/* booking information  */}
             <Container className="my-5">
                 <Row className="g-3">
                     <Col md={7}>
                         <div className="detail-section p-3">
-                            <h1 className=" border-bottom border-secondary">{singlePlan.spot}</h1>
+                            <h1 className=" border-bottom border-secondary">{singlePlan?.spot}</h1>
                             <div className="text-start">
                                 <h4 className="fw-bold my-4">Overview</h4>
 
@@ -71,21 +73,21 @@ const Book = () => {
                                 <div className="mb-3">
                                     <h5 className="fw-bold"><i className="fas fa-euro-sign me-2"></i>Cost</h5>
                                     <li>
-                                        <i className="fas fa-euro-sign me-1"></i> {singlePlan.cost} for groups of 1-3 persons
+                                        <i className="fas fa-euro-sign me-1"></i> {singlePlan?.cost} for groups of 1-3 persons
                                     </li>
-                                    <li><i className="fas fa-euro-sign me-1"></i> {singlePlan.extraCost} for extra per additional person </li>
+                                    <li><i className="fas fa-euro-sign me-1"></i> {singlePlan?.extraCost} for extra per additional person </li>
                                 </div>
 
                                 {/* duration part */}
                                 <div className="mb-3">
                                     <h5 className="fw-bold"><i className="fas fa-clock me-2"></i>Duration</h5>
-                                    <li>{singlePlan.duration}</li>
+                                    <li>{singlePlan?.duration}</li>
                                 </div>
 
                                 {/* transport  */}
                                 <div className="mb-3">
                                     <h5 className="fw-bold"><i className="fas fa-subway me-2"></i>Transport</h5>
-                                    <li>{singlePlan.transport}</li>
+                                    <li>{singlePlan?.transport}</li>
                                 </div>
 
                                 {/* include exclude part  */}

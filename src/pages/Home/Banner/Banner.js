@@ -42,6 +42,18 @@ const Banner = () => {
                         <h3>You can book your favourite package from anywhere</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="https://i.ibb.co/5nWXFD6/Getty-RF-588890475.jpg"
+                        alt="Third slide"
+                    />
+                    <Carousel.Caption className="text-start  fw-bold">
+                        <h1>Welcome to our page</h1>
+                        <h2>We're offering honeymoon special</h2>
+                        <h3>You can book your favourite package from anywhere</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
             </Carousel>
         </div>
     );

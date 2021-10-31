@@ -7,7 +7,8 @@ import Book from './pages/Home/Book/Book';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
-import MyTour from './pages/MyTour/MyTour';
+import ManageTours from './pages/MyTour/ManageTours/ManageTours';
+import MyTour from './pages/MyTour/MyTour/MyTour';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 
@@ -35,6 +36,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/add_plan">
                 <AddPlan></AddPlan>
+              </PrivateRoute>
+              <PrivateRoute path="/manage_plan">
+                <ManageTours></ManageTours>
               </PrivateRoute>
               <Route path="/login">
                 <Login></Login>

@@ -1,0 +1,14 @@
+.manage-plan{
+    background-image: url("https://demo2.pavothemes.com/activland/wp-content/uploads/2021/09/h1_map.png");
+    background-position: center;
+    background-size: cover;
+    /* height: 650px; */
+    background-repeat: no-repeat;
+
+}
+
+@media screen and (max-width: 668px){
+    .manage-plan{
+        height: 100%;
+    }
+}

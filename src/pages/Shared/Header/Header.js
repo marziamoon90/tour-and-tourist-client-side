@@ -12,7 +12,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/home">
                         <div className="header-logo">
                             <img className="me-3 " src={logo} alt="" />
                             <h5>Tour And Tourist</h5>
@@ -25,10 +25,10 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {
-                                user.email ? <div className='d-flex flex-md-row'>
-                                    <Nav.Link as={Link} to="/my_tour">My tour plans</Nav.Link>
-                                    <Nav.Link as={Link} to="/manage_plan">Manage all plan</Nav.Link>
+                                user.email ? <div className='d-md-flex flex-row'>
+                                    <Nav.Link as={Link} to="/my_tour">{user.displayName}</Nav.Link>
                                     <Nav.Link as={Link} to="/add_plan">Add a plan</Nav.Link>
+                                    <Nav.Link as={Link} to="/manage_plan">Manage all plan</Nav.Link>
                                     <Nav.Link onClick={logOut} as={Link} to="/">Logout</Nav.Link>
                                 </div> :
 

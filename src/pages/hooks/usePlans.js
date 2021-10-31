@@ -9,7 +9,7 @@ const usePlans = () => {
             .then(res => {
                 const myPlans = res.data;
                 setPlans(myPlans)
-                console.log(myPlans)
+                // console.log(myPlans)
             })
     }
     useEffect(() => getPlans(), [])
